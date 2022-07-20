@@ -8,9 +8,9 @@ def maximo(x,y):
         return x
         print(f'el valor {y} es el valor maximo')
     else:
+        return y 
         print(f'el valor {y} es el valor maximo')
     
 maximo (2, 5)
-
 maximo (10, 8)
 
