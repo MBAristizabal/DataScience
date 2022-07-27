@@ -1,6 +1,16 @@
 
     #**1)** Escriba una función es_bisiesto() que determine si un año determinado es un año\n",
     #"bisiesto.Un año bisiesto es divisible por 4, pero no por 100. También es divisible por 400"
+    def año_bisiesto(año):
+    if año % 4==0:
+        print('el año es bisiesto')
+    elif año % 100!=0:
+        print('no es bisiesto')
+    else:
+        año % 400 ==0
+        print('el año es bisiesto')
+
+    def año_bisiesto(2000)
    
     #**2)** Haz un programa que pida al usuario una cantidad de dolares, una tasa de interés y un numero de años. Muestra por pantalla en cuanto se habrá convertido el capital inicial transcurridos esos años si cada año se aplica la tasa de interés introducida.\n",
     #"Recordar que un capital C dolares a un interés del x por cien durante n años se convierte en C * (1 + x/100)elevado a n (años). Probar el programa sabiendo que una cantidad de 10000 dolares al 4.5% de interés anual se convierte en 24117.14 dolares al cabo de 20 años. "
