@@ -117,4 +117,9 @@ max(listado)
     1) Hazlo de la forma más fácil posible teniendo en cuenta la posición (index) de esos valores.
     2) Crea un dataframe con esos valores (L = [10, None, 8, 5, None, 20])
 """
+L = [10, None, 8, 5, None, 20]
 
+L[1]= -1
+L[-2]= -1
+
+L
