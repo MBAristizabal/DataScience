@@ -1,9 +1,9 @@
-#EJERCICIO
+#EJERCICIO 1
 
 """Describe  una variable con nombre "notas" que muestre el valor -3"""
 #mostrar su valor 
 notas= -3
-print(notas)
+#print(notas)
 
 
 #EJERCICIO2
@@ -14,10 +14,10 @@ Imprime los valores de "s" es igual a 25, de "y" es igual a 10, poniendo la sigu
 """
 s = 25
 y = 10
-print(f'el valor de s es {s} y el valor de y es {y}')
-print('el valor de s es ' +str(s) + 'el valor de y es' + str(y))
-print('el valor de s es ', s, 'el valor de y es ',y)
-print(f'el valor de s es %s y el valor de y es %s' %(s,y))
+#print(f'el valor de s es {s} y el valor de y es {y}')
+#print('el valor de s es ' +str(s) + 'el valor de y es' + str(y))
+#print('el valor de s es ', s, 'el valor de y es ',y)
+#print(f'el valor de s es %s y el valor de y es %s' %(s,y))
 
 
 #EJERCICIO 3
@@ -25,10 +25,11 @@ print(f'el valor de s es %s y el valor de y es %s' %(s,y))
 """
 Declarar una variable con nombre "name" que contenga el valor de Juan "El Profesor"
 """
-name = "Juan 'El Profesor'"
-name 
-
-
+name_1 = "Juan 'El Profesor'"
+ 
+def profesor_1(name_1):
+    return name_1
+#print(profesor_1(name_1))
 
 # EJERCICIO 4
 
@@ -36,8 +37,12 @@ name
     Concatena las siguientes palabras formando un sola:
     Juan "El profesor"
 """
-name= " Juan" + " " + " El Profesor"
-name
+
+def profesor_2(name_1, name_2):
+    result = name_1 + " " + name_2
+    print(result)
+
+# profesor_2("Juan", "'El profesor'")
 
 # EJERCICIO 5
 
@@ -49,17 +54,18 @@ name
 """
 
 frase= "No cuentes los dias, haz que los dias cuenten"
+def mayuscula(frase):
+    return frase.title()
 
-frase = frase.title()
-frase
+#print(mayuscula(frase))
 
-frase = frase.upper()
-frase
+def mayuscula_todas(frase):
+    return frase.upper()
+#print(mayuscula_todas(frase))
 
-frase = frase.lower()
-frase
-
-
+def minuscula_todas(frase):
+    return frase.lower()
+#print(minuscula_todas(frase))
 
 # EJERCICIO 6
 
@@ -72,22 +78,36 @@ frase
     Muestra de que tipo se trata
 """
 
-suma = 26 + 35
-suma
+def suma(x,y):
+    suma= x + y
+    return suma
+#print(suma(26,35))
 
-multi= 26 * 35
-multi
+def multi(x,y):
+    producto= x * y
+    return producto
+#print(multi(26,35))
 
-operacion = (2+32)*10
-operacion 
+def operacion(x,y,z):
+    operar = (x + y)*z
+    return operar
+#print(operacion(26,35,10))
 
-elevado = 3**9
-elevado
+def elevar(x,y):
+    eleva = (x **y)
+    return eleva
+#print(elevar(3,9))
 
-redondea = round(elevado, 2)
-redondea
+def redondeo(value):
+    print(round(value, 2))
 
-type(redondea)
+#redondeo(19.3333)
+
+def tipo(value):
+    print(type(value))
+
+#tipo(19.333)
+
 
 # EJERCICIO 7
 
@@ -96,17 +116,21 @@ type(redondea)
     Muestra el máximo y el mínimo de (3, -6, 4, -10, 2.6666)
 """
 
-absoluto = abs(-32)
-absoluto
+def absoluto(value):
+    print(abs(value))
+
+#absoluto(-32)
 
 listado = [3,-6,4,-10, 2.6666]
-listado
+def minimo(listado):
+    minimo=min(listado)
+    return minimo
+#print(min(listado))
 
-min(listado)
-
-max(listado)
-
-
+def maximo(listado):
+    maximo=max(listado)
+    return maximo
+#print(max(listado))
 
 
 # EJERCICIO 8
@@ -118,8 +142,14 @@ max(listado)
     2) Crea un dataframe con esos valores (L = [10, None, 8, 5, None, 20])
 """
 L = [10, None, 8, 5, None, 20]
+def test(L):
+    L[1]=-1
+    L[-2]=-1
+    return L
+#print(test(L))
 
-L[1]= -1
-L[-2]= -1
-
-L
+import pandas as pd
+def test1(L):
+    df= pd. DataFrame(L, columns=["listado"])
+    return df
+#print(test1(L))
