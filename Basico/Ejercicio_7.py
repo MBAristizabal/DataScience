@@ -39,7 +39,13 @@ for numero in a :
 
     # ¿Es posible recorrer 1 a 1 un array de numpy?
 
+#si, es posible.
+
 # 6) Haz el mismo proceso programando una sola línea (toma "a" como referencia)
+def unalinea():
+    return[numero for numero in a if numero<5]
+
+#print(unalinea())
 
 # EJERCICIO 2
 
@@ -110,15 +116,15 @@ media= (v1+v2+v3+v4)/4
     (esto es lo que se pide, en esencia)
 """
 
-f_a_calcular=int(input("elige el factorial a calcular:"))
-x=np.arange(1,f_a_calcular+1)
-print(x)
+#f_a_calcular=int(input("elige el factorial a calcular:"))
+#x=np.arange(1,f_a_calcular+1)
+#print(x)
 def factor(f_a_calcular):
     factorial1= 1
     
     return f_a_calcular * factorial1 * x
 
-print(factor(f_a_calcular))
+#print(factor(f_a_calcular))
 
 # EJERCICIO 4
 
@@ -134,3 +140,29 @@ print(factor(f_a_calcular))
     imprime mientras horas<2, cuando llegue a 2 debería parar la ejecución.
     Debería ejecutarse en unos 2 minutos aprox.
 """
+
+import numpy as np
+from time import sleep
+
+# Segundos
+segundo = np.arange(0, 60).tolist()
+# print(segundo)
+
+# Minutos
+minutos = np.arange(0, 60).tolist()
+# print(minutos)
+
+# Horas
+horas = np.arange(0, 24).tolist()
+# print(horas)
+
+def reloj(horas, minutos, segundos):
+    print("h m s")
+    for h in horas:                          # [0-1-2-3.....23]
+        for m in minutos:                    # [0-1-2-3.............59]
+            for s in segundos:               # [0-1-2-3.............59]
+                if h<2:
+                    print(h,m,s)
+                    sleep(0.000001)
+
+#reloj(horas, minutos, segundo)

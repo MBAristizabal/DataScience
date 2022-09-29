@@ -163,11 +163,11 @@ def programa(modulos, horas):
 #print(programa(modulos, horas))
 
 # 4) De ese DataFrame, selecciona solamente la columna "horas" e imprímela
-
-def hs(horas):
-    df= pd.DataFrame({"modulos": modulos, "horas": horas})
+df= pd.DataFrame({"modulos": modulos, "horas": horas})
+def hs(df):
+    
     return df["horas"]
-#print(hs(horas))
+#print(hs(df))
 
 # 5) Muestra el gráfico (plot) para la columna "horas"
 
@@ -176,19 +176,23 @@ def hs(horas):
 # 6) De ese DataFrame, selecciona solamente aquellas materias que tienen 20 o más horas de dedicación
 
 def horario(df):
-    
-    return df[df["horas"]]>=20
+    return df[df['horas']>=20]
 
-print(horario(df))
+#print(horario(df))
 
 
 
 # 7) De ese DataFrame, selecciona solamente aquellas materias que tienen menos de 10 horas de dedicación
 
+#print(df[df['horas']<10])
 # 8) De ese DataFrame, selecciona solamente (si fuera posible)
     # aquellas materias que tienen mas de 26 horas de dedicación
+#print(df[df['horas']>26])
 
 # 9) Apendiza, (si puedes), una nueva columna llamada "docente" con el instructor encargado de la materia.
 
     # Y cuyos nombres serán: Enrique, Susana, Juan, Ana, Laura, Patricia
 
+docente=['Enrique', 'Susana', 'Juan', 'Ana', 'Laura', 'Patricia']
+df['Docente']=docente
+#print(df)

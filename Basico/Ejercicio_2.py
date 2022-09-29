@@ -58,47 +58,49 @@ def sustituir(L):
 import pandas as pd
 
 lista =[10, None, 8, 5, None, 20]
-
+df=pd.DataFrame(lista, columns=["listado"])
 def test(lista):
     df=pd.DataFrame(lista, columns=["listado"])
     print(df)
-test(lista)
+#test(lista)
 
 def test2(lista):
     df=pd.DataFrame(lista, columns=["listado"])
     df= df.listado.fillna(-1)
     print(df)
 
-test2(lista)
+#test2(lista)
 
 #3) Vuelve a escribir el listado con falta de valores (inicial) y sustituye por la media.
 
 L = [10, None, 8, 5, None, 20]
-def test3(L):
-    df=pd.DataFrame(L, columns=["listado"])
-    df= df.listado.fillna(df.listado.mean())
+
+def test3(df):
+    df.listado = df.listado.fillna(df.listado.mean())
     print(df)
 
-#test3(L)
+#test3(df)
 
 #4) Apendiza la columna con estos valores # listado2 = [10, 20, 50, 30, 20, 0]
 
 listado2 = [10, 20, 50, 30, 20, 0]
 
-def test4(L):
-    df=pd.DataFrame(L, columns=["listado"])
+def test4(df,listado):
     df['listado2'] = listado2
     print(df)
 
-#test4(L)
+#test4(df,listado2)
+
+df_2= test4(df,listado2)
 
 # 5) Elimina la columna L
-def test5(L):
-    df=pd.DataFrame(L, columns=["listado"])
-    df=df.drop(["listado"], axis=1)
-    print(df)
+def test5(df_2):
+    df_2 = df.drop(["listado2"], axis=1)
+    print(df_2)
 
-#test5(L)
+#test5(df_2)
+
+#print(df)
 
 # EJERCICIO 3
 

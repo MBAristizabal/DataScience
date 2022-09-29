@@ -19,9 +19,9 @@ z =multiplica(3,5)
 
 # c) Realizarlo con entrada de teclado (input)
 
-#= int(input("Ingrese valor a multiplicar:  "))   
-
-#print(multiplicar(x,y))
+x= int(input("Ingrese valor a multiplicar:  "))   
+y= int(input("Ingrese valor a multiplicar:  "))  
+print(multiplicar(x,y))
 
 
 
@@ -105,6 +105,6 @@ def comunes(S1,s2):
     
     return lista_comunes
     
-print(comunes(s1,s2))
+#print(comunes(s1,s2))
 
 
